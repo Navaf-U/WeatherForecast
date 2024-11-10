@@ -1,6 +1,6 @@
+import Locations from "./components/Locations"; 
 import { useState } from "react";
 import { useGetWeatherQuery } from "./apis/WeatherApi";
-import Locations from "./components/Locations"; 
 
 function ShowData() {
   const [state, setState] = useState("kerala");
@@ -13,7 +13,7 @@ function ShowData() {
 
   const { current, location: locationData } = data;
 
-  // Update district list when state changes
+
   const handleStateChange = (e) => {
     const selectedState = e.target.value;
     setState(selectedState);
@@ -26,7 +26,7 @@ function ShowData() {
         Weather Data for {locationData?.name}
       </h2>
 
-      {/* State Selector */}
+      
       <label htmlFor="state">Select State:</label>
       <select id="state" value={state} onChange={handleStateChange}>
         {Object.keys(Locations).map((stateName) => (
@@ -36,7 +36,7 @@ function ShowData() {
         ))}
       </select>
 
-      {/* District Selector */}
+     
       <label htmlFor="district">Select District:</label>
       <select
         id="district"
@@ -50,7 +50,7 @@ function ShowData() {
         ))}
       </select>
 
-      {/* Weather Data */}
+      
       <div>
         <h3>Location Details:</h3>
         <p><strong>City:</strong> {locationData?.name}</p>

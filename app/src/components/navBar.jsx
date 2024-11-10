@@ -12,7 +12,7 @@ function navBar() {
         <p>Services</p>
         </div>
         <div>
-            <input type="text" placeholder="search..." />
+            <input type="text" placeholder="search..." className="outline-dotted outline-yellow-300 outline-1 focus:outline-2" />
         </div>
       </nav>
       <hr />
