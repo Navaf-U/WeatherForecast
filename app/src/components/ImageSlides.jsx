@@ -43,8 +43,8 @@ function ImageSlides() {
       >
         &#10095;
       </button>
-      <Link to="/weather">
-      <button>CHECK WEATHER</button>
+      <Link to="/weather" className='flex justify-center mt-[-120px] h-16'>
+      <button className='text-center font-[600] w-52 bg-yellow-600 rounded-2xl'>CHECK WEATHER</button>
       </Link>
     </div>
     </>
