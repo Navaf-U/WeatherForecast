@@ -1,6 +1,8 @@
+import NavBar from './navBar'
 import { useState } from "react";
-
+import {Link} from 'react-router-dom'
 function ImageSlides() {
+
   const images = [
     "https://img.freepik.com/free-photo/streetlights-cloudy-day_23-2148098648.jpg?t=st=1731238888~exp=1731242488~hmac=741bc18d81a95e7efd3efca6bd1a5d9852bf3845424c06061778b9e4f11af015&w=740",
     "https://img.freepik.com/premium-photo/hurricane-season-sign-yellow-orange-color-storm-weather-nature-climate-wind-environment-danger-sky-r_178037-4384.jpg?w=740", 
@@ -21,6 +23,8 @@ function ImageSlides() {
 
 
   return (
+    <>
+    <NavBar/>
     <div className="relative w-full h-[500px]">
       <img
         src={images[currentImageIndex]}
@@ -39,7 +43,12 @@ function ImageSlides() {
       >
         &#10095;
       </button>
+      <Link to="/weather">
+      <button>CHECK WEATHER</button>
+      </Link>
     </div>
+    </>
+   
   );
 }
 

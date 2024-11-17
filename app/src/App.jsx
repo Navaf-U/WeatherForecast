@@ -1,12 +1,8 @@
-import ShowData from "./ShowData";
-import ImageSlides from "./components/ImageSlides";
-import NavBar from './components/navBar'
+import AppRoutes from "./AppRoutes";
 function App() {
 return(
   <>
-  <NavBar/>
-  <ImageSlides/>
-  <ShowData/>
+ <AppRoutes/>
   </>
 )
 }
